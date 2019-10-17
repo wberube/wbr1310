@@ -1,0 +1,11 @@
+--- ./buildroot/toolchain_build_mips/gcc-3.3.5/gcc/collect2.c.orig	2019-02-17 12:08:02.171019849 -0500
++++ ./buildroot/toolchain_build_mips/gcc-3.3.5/gcc/collect2.c	2019-02-17 12:08:18.139189904 -0500
+@@ -1572,7 +1572,7 @@ collect_execute (prog, argv, redir)
+   if (redir)
+     {
+       /* Open response file.  */
+-      redir_handle = open (redir, O_WRONLY | O_TRUNC | O_CREAT);
++      redir_handle = open (redir, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
+ 
+       /* Duplicate the stdout and stderr file handles
+ 	 so they can be restored later.  */
