@@ -1,3 +1,9 @@
+Planned modifications :
+	- Strip unuseful debugging symbols and ELF headers using sstrip
+	- Try cramfs compression for saving some precious RAM memory
+	- Optimize the Busybox toolset, add scripts (and hopefully update it)
+	- Remove as much proprietary code as possible in a new branch for ports
+
 
 o This file contains steps for building toolchain and building the image.
 
