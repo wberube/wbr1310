@@ -77,11 +77,13 @@ Step 2. Building the toolchain
 
   7) $patch -p0 < c-parse.y.patch
 
-  8) $make -C buildroot  # you can skip this step, as step 9 does it also
+  8) $patch -p0 < collect2.c.patch
 
-  9) $./build_tool_chain.sh
+  9) $make -C buildroot  # you can skip this step, as step 9 does it also
 
-  10) After build toolchain successfully, you will get the prompt line,
+  10) $./build_tool_chain.sh
+
+  11) After build toolchain successfully, you will get the prompt line,
 	  "Use source ./setupenv to setup your environment variables !"
 
 
